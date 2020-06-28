@@ -2,7 +2,8 @@ pipeline {
   agent {
     docker {
       image 'node:6-alpine'
-      args '-p 1337:3000'
+      args '''-p 1337:3000
+--user jenkins:docker'''
     }
 
   }
